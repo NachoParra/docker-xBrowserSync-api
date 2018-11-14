@@ -1,0 +1,5 @@
+use xbrowsersync
+db.createUser({ user: "xbrowsersyncdb", pwd: "xbrowsersyncdb", roles: ["readWrite"] })
+db.newsynclogs.createIndex( { "expiresAt": 1 }, { expireAfterSeconds: 0 } )
+db.newsynclogs.createIndex({ "ipAddress": 1 })
+exit
